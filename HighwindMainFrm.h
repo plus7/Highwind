@@ -25,6 +25,7 @@
 //Header Include Start and Header Include End.
 //wxDev-C++ designer will remove them. Add custom headers after the block.
 ////Header Include Start
+#include <wx/statusbr.h>
 #include <wx/toolbar.h>
 #include <wx/menu.h>
 ////Header Include End
@@ -48,6 +49,7 @@ class HighwindMainFrm : public wxFrame
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxStatusBar *WxStatusBar1;
 		wxToolBar *WxToolBar1;
 		wxMenuBar *MenuBar;
 		////GUI Control Declaration End
@@ -60,6 +62,7 @@ class HighwindMainFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
+			ID_WXSTATUSBAR1 = 2,
 			ID_WXTOOLBAR1 = 1,
 			////GUI Enum Control ID End
 			ID_DUMMY_VALUE_ //don't remove this value unless you have other enum values

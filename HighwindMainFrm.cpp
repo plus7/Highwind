@@ -51,6 +51,9 @@ void HighwindMainFrm::CreateGUIControls()
 
 	WxToolBar1 = new wxToolBar(this, ID_WXTOOLBAR1, wxPoint(0, 0), wxSize(633, 29));
 
+	WxStatusBar1 = new wxStatusBar(this, ID_WXSTATUSBAR1);
+
+	SetStatusBar(WxStatusBar1);
 	WxToolBar1->Realize();
 	SetToolBar(WxToolBar1);
 	SetTitle(wxT("Highwind"));

@@ -121,4 +121,21 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
     Wx_Layer = 10
   end
+  object WxStatusBar1: TWxStatusBar
+    Left = 0
+    Top = 415
+    Width = 633
+    Height = 19
+    Panels = <>
+    SimplePanel = False
+    Wx_Class = 'wxStatusBar'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_IDName = 'ID_WXSTATUSBAR1'
+    Wx_IDValue = 2
+    Wx_StatusbarStyleSet = []
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_Enabled = True
+    Wx_Border = 0
+  end
 end
