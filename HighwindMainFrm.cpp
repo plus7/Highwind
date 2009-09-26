@@ -49,6 +49,10 @@ void HighwindMainFrm::CreateGUIControls()
 
 	MenuBar = new wxMenuBar();
 
+	WxToolBar1 = new wxToolBar(this, ID_WXTOOLBAR1, wxPoint(0, 0), wxSize(633, 29));
+
+	WxToolBar1->Realize();
+	SetToolBar(WxToolBar1);
 	SetTitle(wxT("Highwind"));
 	SetIcon(wxNullIcon);
 	SetSize(8,8,649,471);

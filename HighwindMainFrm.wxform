@@ -82,4 +82,43 @@ object frmNewForm: TfrmNewForm
     Wx_MenuItems.Wx_FileHistory = False
     Wx_HasHistory = False
   end
+  object WxToolBar1: TWxToolBar
+    Left = 0
+    Top = 0
+    Width = 633
+    Height = 29
+    Caption = 'WxToolBar1'
+    TabOrder = 1
+    Wx_Class = 'wxToolBar'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EventList.Strings = (
+      'EVT_TOOL:OnTool'
+      'EVT_MENU:OnMenu'
+      'EVT_TOOL_RCLICKED:OnRightClick'
+      'EVT_TOOL_ENTER:OnToolEnter'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_ToolbarStyleSet = []
+    Wx_GeneralStyle = []
+    Wx_IDName = 'ID_WXTOOLBAR1'
+    Wx_IDValue = 1
+    Wx_Hidden = False
+    Wx_Border = 0
+    Wx_PaneCaption = 'WxToolBar1'
+    Wx_PaneName = 'WxToolBar1_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = [ToolbarPane]
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+    Wx_Layer = 10
+  end
 end
