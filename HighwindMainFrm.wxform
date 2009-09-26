@@ -31,6 +31,97 @@ object frmNewForm: TfrmNewForm
   isAuimanagerAvailable = False
   PixelsPerInch = 96
   TextHeight = 18
+  object ToolBar: TWxToolBar
+    Left = 0
+    Top = 0
+    Width = 633
+    Height = 29
+    Caption = 'ToolBar'
+    TabOrder = 1
+    Wx_Class = 'wxToolBar'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EventList.Strings = (
+      'EVT_TOOL:OnTool'
+      'EVT_MENU:OnMenu'
+      'EVT_TOOL_RCLICKED:OnRightClick'
+      'EVT_TOOL_ENTER:OnToolEnter'
+      'EVT_UPDATE_UI:OnUpdateUI')
+    Wx_ToolbarStyleSet = []
+    Wx_GeneralStyle = []
+    Wx_IDName = 'ID_TOOLBAR'
+    Wx_IDValue = 1
+    Wx_Hidden = False
+    Wx_Border = 0
+    Wx_PaneCaption = 'WxToolBar1'
+    Wx_PaneName = 'WxToolBar1_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = [ToolbarPane]
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+    Wx_Layer = 10
+  end
+  object StatusBar: TWxStatusBar
+    Left = 0
+    Top = 415
+    Width = 633
+    Height = 19
+    Panels = <>
+    SimplePanel = False
+    Wx_Class = 'wxStatusBar'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_IDName = 'ID_STATUSBAR'
+    Wx_IDValue = 2
+    Wx_StatusbarStyleSet = []
+    Wx_GeneralStyle = []
+    Wx_Hidden = False
+    Wx_Enabled = True
+    Wx_Border = 0
+  end
+  object TabGroup: TWxNotebook
+    Left = 66
+    Top = 206
+    Width = 289
+    Height = 193
+    TabOrder = 3
+    Wx_Class = 'wxNotebook'
+    Wx_ControlOrientation = wxControlVertical
+    Wx_EventList.Strings = (
+      'EVT_UPDATE_UI:OnUpdateUI'
+      'EVT_NOTEBOOK_PAGE_CHANGED:OnPageChanged'
+      'EVT_NOTEBOOK_PAGE_CHANGING:OnPageChanging')
+    Wx_IDName = 'ID_TABGROUP'
+    Wx_IDValue = 3
+    Wx_Hidden = False
+    Wx_NoteBookStyle = []
+    Wx_GeneralStyle = []
+    Wx_BookAlignment = wxNB_DEFAULT
+    Wx_PaneCaption = 'WxNotebook1'
+    Wx_PaneName = 'WxNotebook1_Pane'
+    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
+    Wx_Aui_Dockable_Direction = []
+    Wx_Aui_Pane_Style = []
+    Wx_Aui_Pane_Buttons = []
+    Wx_BestSize_Height = 0
+    Wx_BestSize_Width = 0
+    Wx_MinSize_Height = 0
+    Wx_MinSize_Width = 0
+    Wx_MaxSize_Height = 0
+    Wx_MaxSize_Width = 0
+    Wx_Floating_Height = 0
+    Wx_Floating_Width = 0
+    Wx_Floating_X_Pos = 0
+    Wx_Floating_Y_Pos = 0
+  end
   object MenuBar: TWxMenuBar
     Left = 61
     Top = 24
@@ -81,61 +172,5 @@ object frmNewForm: TfrmNewForm
     Wx_MenuItems.Wx_Checked = False
     Wx_MenuItems.Wx_FileHistory = False
     Wx_HasHistory = False
-  end
-  object WxToolBar1: TWxToolBar
-    Left = 0
-    Top = 0
-    Width = 633
-    Height = 29
-    Caption = 'WxToolBar1'
-    TabOrder = 1
-    Wx_Class = 'wxToolBar'
-    Wx_ControlOrientation = wxControlVertical
-    Wx_EventList.Strings = (
-      'EVT_TOOL:OnTool'
-      'EVT_MENU:OnMenu'
-      'EVT_TOOL_RCLICKED:OnRightClick'
-      'EVT_TOOL_ENTER:OnToolEnter'
-      'EVT_UPDATE_UI:OnUpdateUI')
-    Wx_ToolbarStyleSet = []
-    Wx_GeneralStyle = []
-    Wx_IDName = 'ID_WXTOOLBAR1'
-    Wx_IDValue = 1
-    Wx_Hidden = False
-    Wx_Border = 0
-    Wx_PaneCaption = 'WxToolBar1'
-    Wx_PaneName = 'WxToolBar1_Pane'
-    Wx_Aui_Dock_Direction = wxAUI_DOCK_NONE
-    Wx_Aui_Dockable_Direction = []
-    Wx_Aui_Pane_Style = [ToolbarPane]
-    Wx_Aui_Pane_Buttons = []
-    Wx_BestSize_Height = 0
-    Wx_BestSize_Width = 0
-    Wx_MinSize_Height = 0
-    Wx_MinSize_Width = 0
-    Wx_MaxSize_Height = 0
-    Wx_MaxSize_Width = 0
-    Wx_Floating_Height = 0
-    Wx_Floating_Width = 0
-    Wx_Floating_X_Pos = 0
-    Wx_Floating_Y_Pos = 0
-    Wx_Layer = 10
-  end
-  object WxStatusBar1: TWxStatusBar
-    Left = 0
-    Top = 415
-    Width = 633
-    Height = 19
-    Panels = <>
-    SimplePanel = False
-    Wx_Class = 'wxStatusBar'
-    Wx_ControlOrientation = wxControlVertical
-    Wx_IDName = 'ID_WXSTATUSBAR1'
-    Wx_IDValue = 2
-    Wx_StatusbarStyleSet = []
-    Wx_GeneralStyle = []
-    Wx_Hidden = False
-    Wx_Enabled = True
-    Wx_Border = 0
   end
 end

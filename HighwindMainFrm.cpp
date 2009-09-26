@@ -49,13 +49,15 @@ void HighwindMainFrm::CreateGUIControls()
 
 	MenuBar = new wxMenuBar();
 
-	WxToolBar1 = new wxToolBar(this, ID_WXTOOLBAR1, wxPoint(0, 0), wxSize(633, 29));
+	ToolBar = new wxToolBar(this, ID_TOOLBAR, wxPoint(0, 0), wxSize(633, 29));
 
-	WxStatusBar1 = new wxStatusBar(this, ID_WXSTATUSBAR1);
+	StatusBar = new wxStatusBar(this, ID_STATUSBAR);
 
-	SetStatusBar(WxStatusBar1);
-	WxToolBar1->Realize();
-	SetToolBar(WxToolBar1);
+	TabGroup = new wxNotebook(this, ID_TABGROUP, wxPoint(66, 206), wxSize(289, 193), wxNB_DEFAULT);
+
+	SetStatusBar(StatusBar);
+	ToolBar->Realize();
+	SetToolBar(ToolBar);
 	SetTitle(wxT("Highwind"));
 	SetIcon(wxNullIcon);
 	SetSize(8,8,649,471);
