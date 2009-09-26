@@ -21,9 +21,10 @@
 //Add Custom Events only in the appropriate block.
 //Code added in other places will be removed by wxDev-C++
 ////Event Table Start
-BEGIN_EVENT_TABLE(HighwindMainFrm, wxFrame)
+BEGIN_EVENT_TABLE(HighwindMainFrm,wxFrame)
 	////Manual Code Start
 	////Manual Code End
+	
 	EVT_CLOSE(HighwindMainFrm::OnClose)
 END_EVENT_TABLE()
 ////Event Table End
@@ -45,6 +46,14 @@ void HighwindMainFrm::CreateGUIControls()
 	//wxDev-C++ designer will remove them.
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
+
+	MenuBar = new wxMenuBar();
+
+	SetTitle(wxT("Highwind"));
+	SetIcon(wxNullIcon);
+	SetSize(8,8,649,471);
+	Center();
+	
 	////GUI Items Creation End
 }
 

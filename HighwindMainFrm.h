@@ -25,10 +25,12 @@
 //Header Include Start and Header Include End.
 //wxDev-C++ designer will remove them. Add custom headers after the block.
 ////Header Include Start
+#include <wx/menu.h>
 ////Header Include End
 
 ////Dialog Style Start
-#define HighwindMainFrm_STYLE wxCAPTION | wxSYSTEM_MENU | wxDIALOG_NO_PARENT | wxMINIMIZE_BOX | wxCLOSE_BOX
+#undef HighwindMainFrm_STYLE
+#define HighwindMainFrm_STYLE wxCAPTION | wxSYSTEM_MENU | wxMINIMIZE_BOX | wxCLOSE_BOX
 ////Dialog Style End
 
 class HighwindMainFrm : public wxFrame
@@ -45,6 +47,7 @@ class HighwindMainFrm : public wxFrame
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxMenuBar *MenuBar;
 		////GUI Control Declaration End
 		
 	private:
