@@ -1,0 +1,2 @@
+wxJSONのincludeディレクトリに含まれるヘッダファイルを
+wxWidgetsのディレクトリ/include/wx/以下に配置すること。
