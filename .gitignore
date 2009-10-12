@@ -2,3 +2,7 @@ Debug/
 *.ncb
 *.suo
 *.user
+Objects/
+Output/
+Release/
+*~
