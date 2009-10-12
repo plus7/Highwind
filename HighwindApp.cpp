@@ -10,17 +10,26 @@
 #include "HighwindApp.h"
 #include "HighwindMainFrm.h"
 
-IMPLEMENT_APP(HighwindMainFrmApp)
+IMPLEMENT_APP(HighwindApp)
 
-bool HighwindMainFrmApp::OnInit()
+bool HighwindApp::OnInit()
 {
+	InitConfig();
     HighwindMainFrm* frame = new HighwindMainFrm(NULL);
     SetTopWindow(frame);
     frame->Show();
     return true;
 }
  
-int HighwindMainFrmApp::OnExit()
+int HighwindApp::OnExit()
 {
+	//delete m_menuconf;
+	//delete m_tbconf;
 	return 0;
+}
+
+void HighwindApp::InitConfig()
+{
+	//m_menuconf = new wxJSONValue();
+	//m_tbconf = new wxJSONValue();
 }

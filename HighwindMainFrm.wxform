@@ -4,8 +4,8 @@ object frmNewForm: TfrmNewForm
   AutoScroll = False
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Highwind'
-  ClientHeight = 434
-  ClientWidth = 633
+  ClientHeight = 289
+  ClientWidth = 422
   Color = clAppWorkSpace
   OldCreateOrder = True
   PopupMenu = DesignerPopup.Owner
@@ -30,13 +30,15 @@ object frmNewForm: TfrmNewForm
   Wx_BorderAlignment = []
   isAuimanagerAvailable = False
   PixelsPerInch = 96
-  TextHeight = 18
+  TextHeight = 12
   object ToolBar: TWxToolBar
     Left = 0
     Top = 0
-    Width = 633
+    Width = 422
     Height = 29
     Caption = 'ToolBar'
+    Color = clBtnFace
+    ParentColor = False
     TabOrder = 1
     Wx_Class = 'wxToolBar'
     Wx_ControlOrientation = wxControlVertical
@@ -69,11 +71,57 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_X_Pos = 0
     Wx_Floating_Y_Pos = 0
     Wx_Layer = 10
+    object WxToolButton1: TWxToolButton
+      Left = 0
+      Top = 0
+      Width = 22
+      Height = 22
+      TabOrder = 0
+      Layout = blGlyphTop
+      Wx_BKColor = clBlack
+      Wx_ButtonStyle = []
+      Wx_Class = 'wxToolBarTool'
+      Wx_ControlOrientation = wxControlVertical
+      Wx_Default = False
+      Wx_EventList.Strings = (
+        'EVT_MENU:OnClick'
+        'EVT_UPDATE_UI:OnUpdateUI')
+      Wx_FGColor = clBlack
+      Wx_GeneralStyle = []
+      Wx_Hidden = False
+      Wx_IDName = 'wxID_BACKWARD'
+      Wx_IDValue = 4
+      Wx_BITMAP.Data = {07544269746D617000000000}
+      Wx_DISABLE_BITMAP.Data = {07544269746D617000000000}
+    end
+    object WxToolButton2: TWxToolButton
+      Left = 22
+      Top = 0
+      Width = 24
+      Height = 22
+      TabOrder = 1
+      Layout = blGlyphTop
+      Wx_BKColor = clBlack
+      Wx_ButtonStyle = []
+      Wx_Class = 'wxToolBarTool'
+      Wx_ControlOrientation = wxControlVertical
+      Wx_Default = False
+      Wx_EventList.Strings = (
+        'EVT_MENU:OnClick'
+        'EVT_UPDATE_UI:OnUpdateUI')
+      Wx_FGColor = clBlack
+      Wx_GeneralStyle = []
+      Wx_Hidden = False
+      Wx_IDName = 'ID_WXTOOLBUTTON2'
+      Wx_IDValue = 5
+      Wx_BITMAP.Data = {07544269746D617000000000}
+      Wx_DISABLE_BITMAP.Data = {07544269746D617000000000}
+    end
   end
   object StatusBar: TWxStatusBar
     Left = 0
-    Top = 415
-    Width = 633
+    Top = 270
+    Width = 422
     Height = 19
     Panels = <>
     SimplePanel = False
@@ -88,10 +136,10 @@ object frmNewForm: TfrmNewForm
     Wx_Border = 0
   end
   object TabGroup: TWxNotebook
-    Left = 66
-    Top = 206
-    Width = 289
-    Height = 193
+    Left = 44
+    Top = 137
+    Width = 193
+    Height = 129
     TabOrder = 3
     Wx_Class = 'wxNotebook'
     Wx_ControlOrientation = wxControlVertical
@@ -123,8 +171,8 @@ object frmNewForm: TfrmNewForm
     Wx_Floating_Y_Pos = 0
   end
   object MenuBar: TWxMenuBar
-    Left = 61
-    Top = 24
+    Left = 41
+    Top = 16
     Width = 28
     Height = 27
     TabOrder = 0

@@ -7,8 +7,8 @@
 //
 //---------------------------------------------------------------------------
 
-#ifndef __HIGHWINDMAINFRMApp_h__
-#define __HIGHWINDMAINFRMApp_h__
+#ifndef __HIGHWINDApp_h__
+#define __HIGHWINDApp_h__
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -20,11 +20,24 @@
 	#include <wx/wxprec.h>
 #endif
 
-class HighwindMainFrmApp : public wxApp
+#include <wx/jsonreader.h>
+
+class HighwindApp : public wxApp
 {
 	public:
 		bool OnInit();
 		int OnExit();
+		wxJSONValue GetMenuConf() { return m_menuconf; };
+		wxJSONValue GetToolbarConf() { return m_tbconf; };
+	private:
+		void InitConfig();
+
+	private:
+		wxJSONValue m_menuconf;
+		wxJSONValue m_tbconf;
 };
+
+DECLARE_APP(HighwindApp)
+
 
 #endif

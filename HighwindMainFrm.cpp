@@ -6,9 +6,10 @@
 // Description: HighwindMainFrm class implementation
 //
 //---------------------------------------------------------------------------
-
+#include "HighwindApp.h"
 #include "HighwindMainFrm.h"
-
+#include <wx/jsonreader.h>
+#include <wx/windowid.h>
 //Do not add custom headers between
 //Header Include Start and Header Include End
 //wxDev-C++ designer will remove them
@@ -33,6 +34,27 @@ HighwindMainFrm::HighwindMainFrm(wxWindow *parent, wxWindowID id, const wxString
 : wxFrame(parent, id, title, position, size, style)
 {
 	CreateGUIControls();
+
+	CreateMenuItems();
+
+	CreateToolButtons();
+
+	wxWindowID hoeid = this->NewControlId(1);
+	wxWindowID hoeid2 = this->NewControlId(1);
+	// the JSON text, stored in a wxString object
+	/*wxString document( _T( "{ \"answer\" : 42 }"));
+
+	// construct the JSON root object
+	wxJSONValue  root;
+
+	// construct a JSON parser
+	wxJSONReader reader;
+
+	int errors = reader.Parse(document, &root);
+	if(errors>0){
+
+	}
+	int aaa = root["answer"].AsInt();*/
 }
 
 HighwindMainFrm::~HighwindMainFrm()
@@ -47,23 +69,48 @@ void HighwindMainFrm::CreateGUIControls()
 	//Add the custom code before or after the blocks
 	////GUI Items Creation Start
 
-	MenuBar = new wxMenuBar();
-
-	ToolBar = new wxToolBar(this, ID_TOOLBAR, wxPoint(0, 0), wxSize(633, 29));
+	ToolBar = new wxToolBar(this, ID_TOOLBAR, wxPoint(0, 0), wxSize(422, 29));
 
 	StatusBar = new wxStatusBar(this, ID_STATUSBAR);
 
-	TabGroup = new wxNotebook(this, ID_TABGROUP, wxPoint(66, 206), wxSize(289, 193), wxNB_DEFAULT);
+	TabGroup = new wxNotebook(this, ID_TABGROUP, wxPoint(44, 137), wxSize(193, 129), wxNB_DEFAULT);
 
+	MenuBar = new wxMenuBar();
+
+	wxBitmap WxToolButton1_BITMAP (wxNullBitmap);
+	wxBitmap WxToolButton1_DISABLE_BITMAP (wxNullBitmap);
+	ToolBar->AddTool(wxID_BACKWARD, wxT(""), WxToolButton1_BITMAP, WxToolButton1_DISABLE_BITMAP, wxITEM_NORMAL, wxT(""), wxT(""));
+
+/*	wxBitmap WxToolButton2_BITMAP (wxNullBitmap);
+	wxBitmap WxToolButton2_DISABLE_BITMAP (wxNullBitmap);
+	ToolBar->AddTool(ID_WXTOOLBUTTON2, wxT(""), WxToolButton2_BITMAP, WxToolButton2_DISABLE_BITMAP, wxITEM_NORMAL, wxT(""), wxT(""));
+*/
 	SetStatusBar(StatusBar);
 	ToolBar->Realize();
 	SetToolBar(ToolBar);
 	SetTitle(wxT("Highwind"));
 	SetIcon(wxNullIcon);
-	SetSize(8,8,649,471);
+	SetSize(8,8,430,323);
 	Center();
 	
 	////GUI Items Creation End
+}
+
+void HighwindMainFrm::CreateMenuItems(){
+	wxJSONValue mconf = wxGetApp().GetMenuConf();
+
+}
+
+void HighwindMainFrm::CreateToolButtons(){
+	wxJSONValue tconf = wxGetApp().GetMenuConf();
+	wxJSONValue items = tconf["Items"];
+
+	bool isArray = items.IsArray();
+	if(!isArray) return;
+	wxArrayString arr;
+	for ( int i = 0; i < items.Size(); i++ ) {
+		//arr.Add( items[i].AsString());
+	}
 }
 
 void HighwindMainFrm::OnClose(wxCloseEvent& event)
