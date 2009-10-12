@@ -40,6 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="./3rdparty/json/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;_WINDOWS;NOPCH"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -111,6 +112,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="./3rdparty/json/include"
 				PreprocessorDefinitions="WIN32;__WXMSW__;_UNICODE;_WINDOWS;NOPCH"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -128,7 +130,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="wxmsw29u_adv.lib wxmsw29u_core.lib wxbase29u.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib wxregexu.lib wxexpat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib rpcrt4.lib wsock32.lib winmm.lib wxJSON.lib $(NOINHERIT)"
+				AdditionalDependencies="wxmsw29u_adv.lib wxmsw29u_core.lib wxbase29u.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib wxregexu.lib wxexpat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib rpcrt4.lib wsock32.lib winmm.lib $(NOINHERIT)"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -174,15 +176,19 @@
 				>
 			</File>
 			<File
-				RelativePath=".\jsonreader.cpp"
+				RelativePath=".\3rdparty\json\src\jsonreader.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\jsonval.cpp"
+				RelativePath=".\3rdparty\json\src\jsonval.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\jsonwriter.cpp"
+				RelativePath=".\3rdparty\json\src\jsonwriter.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MenuObject.cpp"
 				>
 			</File>
 		</Filter>
@@ -197,6 +203,10 @@
 			</File>
 			<File
 				RelativePath=".\HighwindMainFrm.h"
+				>
+			</File>
+			<File
+				RelativePath=".\MenuObject.h"
 				>
 			</File>
 		</Filter>
