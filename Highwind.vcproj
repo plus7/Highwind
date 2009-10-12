@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="./3rdparty/json/include"
+				AdditionalIncludeDirectories="./3rdparty/webconnect;./3rdparty/json/include"
 				PreprocessorDefinitions="WIN32;_DEBUG;__WXMSW__;__WXDEBUG__;_UNICODE;_WINDOWS;NOPCH"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -112,7 +112,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="./3rdparty/json/include"
+				AdditionalIncludeDirectories="./3rdparty/webconnect;./3rdparty/json/include"
 				PreprocessorDefinitions="WIN32;__WXMSW__;_UNICODE;_WINDOWS;NOPCH"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -168,6 +168,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\3rdparty\webconnect\dom.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\HighwindApp.cpp"
 				>
 			</File>
@@ -197,6 +201,26 @@
 			</File>
 			<File
 				RelativePath=".\MenuObject.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\3rdparty\webconnect\nsimpl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\3rdparty\webconnect\promptservice.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\3rdparty\webconnect\webcontrol.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\3rdparty\webconnect\webframe.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\3rdparty\webconnect\webprefs.cpp"
 				>
 			</File>
 		</Filter>

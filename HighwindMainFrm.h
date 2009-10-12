@@ -58,6 +58,8 @@ class HighwindMainFrm : public wxFrame
 		wxStatusBar *StatusBar;
 		wxToolBar *ToolBar;
 		wxComboBox *AddressBar;
+		wxComboBox *SearchBar;
+		wxChoice *EngineBox;
 		////GUI Control Declaration End
 		
 	private:
