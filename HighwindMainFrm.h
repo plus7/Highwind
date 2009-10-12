@@ -27,8 +27,10 @@
 ////Header Include Start
 #include <wx/menu.h>
 #include <wx/notebook.h>
+#include <wx/aui/auibook.h>
 #include <wx/statusbr.h>
 #include <wx/toolbar.h>
+#include <wx/combobox.h>
 ////Header Include End
 
 ////Dialog Style Start
@@ -52,9 +54,10 @@ class HighwindMainFrm : public wxFrame
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
 		wxMenuBar *MenuBar;
-		wxNotebook *TabGroup;
+		wxAuiNotebook *TabGroup;
 		wxStatusBar *StatusBar;
 		wxToolBar *ToolBar;
+		wxComboBox *AddressBar;
 		////GUI Control Declaration End
 		
 	private:
@@ -65,9 +68,12 @@ class HighwindMainFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
-			ID_TOOLBAR,
+			ID_TOOLBAR = 1,
 			ID_STATUSBAR,
 			ID_TABGROUP,
+			ID_ADDRESSBAR,
+			ID_SEARCHBAR,
+			ID_ENGINEBOX,
 			ID_NEWTABGRP,
 			ID_NEWTAB,
 			ID_NEWTABGRP_FROMCB,
@@ -82,12 +88,12 @@ class HighwindMainFrm : public wxFrame
 			ID_CLOSETABGRP_LEFT,
 			ID_CLOSETABGRP_RIGHT,
 			ID_CLOSETABGRP_EXCEPT,
-			ID_CLOSETABGRPALL,
+			ID_CLOSETABGRP_ALL,
 			ID_CLOSETAB,
 			ID_CLOSETAB_LEFT,
 			ID_CLOSETAB_RIGHT,
 			ID_CLOSETAB_EXCEPT,
-			ID_CLOSETABALL,
+			ID_CLOSETAB_ALL,
 			ID_CLOSEWINDOW,
 			ID_OFFLINE,
 			ID_CUT,
@@ -107,6 +113,7 @@ class HighwindMainFrm : public wxFrame
 			ID_SWFAYT,
 			ID_GOBACK,
 			ID_GOFORWARD,
+			ID_QUIT,
 			/*ID_WXTOOLBUTTON2 = 5,
 		    */
 			////GUI Enum Control ID End
@@ -114,10 +121,13 @@ class HighwindMainFrm : public wxFrame
 		};
 		
 	private:
+		void OnAddressEnter(wxCommandEvent& event);
 		void OnClose(wxCloseEvent& event);
 		void CreateGUIControls();
 		void CreateMenuItems();
 		void CreateToolButtons();
+		void CreateBuiltinIDHashMap();
+		void CreateAdditionalIDHashMap();
 };
 
 #endif

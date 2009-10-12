@@ -24,6 +24,8 @@
 ////Event Table Start
 BEGIN_EVENT_TABLE(HighwindMainFrm,wxFrame)
 	////Manual Code Start
+	//EVT_MENU(ID_QUIT, 
+	EVT_TEXT_ENTER(ID_ADDRESSBAR, HighwindMainFrm::OnAddressEnter)
 	////Manual Code End
 	
 	EVT_CLOSE(HighwindMainFrm::OnClose)
@@ -73,7 +75,12 @@ void HighwindMainFrm::CreateGUIControls()
 
 	StatusBar = new wxStatusBar(this, ID_STATUSBAR);
 
-	TabGroup = new wxNotebook(this, ID_TABGROUP, wxPoint(44, 137), wxSize(193, 129), wxNB_DEFAULT);
+	TabGroup = new wxAuiNotebook(this, ID_TABGROUP, wxPoint(44, 137), wxSize(193, 129), wxNB_DEFAULT|wxBORDER_NONE);
+
+	wxAuiNotebook *page = new wxAuiNotebook(this, 0, wxPoint(44, 137), wxSize(193, 129), wxNB_DEFAULT|wxBORDER_NONE);
+	TabGroup->AddPage(page, wxT("hoge"));
+	page->AddPage(new wxControl(page, 0, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE), wxT("fuga"));
+	TabGroup->SetTabCtrlHeight(0);
 
 	MenuBar = new wxMenuBar();
 
@@ -102,6 +109,9 @@ void HighwindMainFrm::CreateMenuItems(){
 }
 
 void HighwindMainFrm::CreateToolButtons(){
+	AddressBar = new wxComboBox(ToolBar, ID_ADDRESSBAR);
+	ToolBar->AddControl(AddressBar, wxT("address"));
+
 	wxJSONValue tconf = wxGetApp().GetMenuConf();
 	wxJSONValue items = tconf["Items"];
 
@@ -111,6 +121,11 @@ void HighwindMainFrm::CreateToolButtons(){
 	for ( int i = 0; i < items.Size(); i++ ) {
 		//arr.Add( items[i].AsString());
 	}
+}
+
+void HighwindMainFrm::OnAddressEnter(wxCommandEvent& event)
+{
+	wxMessageBox(AddressBar->GetValue(), wxT("test"));
 }
 
 void HighwindMainFrm::OnClose(wxCloseEvent& event)

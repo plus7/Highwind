@@ -176,6 +176,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\HighwindTabCtrl.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\HighwindTabGrpCtrl.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\3rdparty\json\src\jsonreader.cpp"
 				>
 			</File>
@@ -203,6 +211,14 @@
 			</File>
 			<File
 				RelativePath=".\HighwindMainFrm.h"
+				>
+			</File>
+			<File
+				RelativePath=".\HighwindTabCtrl.h"
+				>
+			</File>
+			<File
+				RelativePath=".\HighwindTabGrpCtrl.h"
 				>
 			</File>
 			<File
